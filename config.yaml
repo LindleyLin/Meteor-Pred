@@ -1,0 +1,40 @@
+seq_len: 4
+seg_len: 1
+in_ch: 1
+piy: 32
+pix: 32
+
+dropout: 0.1
+
+ratio: 0.99
+is_shuffle: True
+
+epochs: 1000
+batch_size: 600
+lr: 0.002
+multiplier: 2.5
+grad_clip: 1.0
+
+# Below are for CNN
+
+c_base_ch: 64
+n_blk: [2, 2]
+
+# Below are for Transformer
+
+t_base_ch: 128
+max_len: 1000
+ffn_hid: 512
+n_head: 4
+n_layer: 1
+
+# Below are for DDPM
+
+d_base_ch: 64
+T: 500
+iT: 100
+eta: 0.2
+cdim: 128
+ch_mult: [1, 2, 2]
+attn: [0, 1]
+n_res: 2
